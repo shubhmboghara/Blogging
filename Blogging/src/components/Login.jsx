@@ -23,7 +23,8 @@ function Login() {
             if (session) {
                 const userData = await authService.getCurrentUser()
                 if (userData) dispatch(authLogin(userData))
-                navigate("/")
+                // Change this line in your login function
+                navigate("/", { replace: true })
             }
         } catch (error) {
             setError(error.message);

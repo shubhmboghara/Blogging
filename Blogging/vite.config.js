@@ -6,6 +6,7 @@ import fs from 'fs'
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: '/',
   plugins: [
     react(), 
     tailwindcss(),
@@ -35,4 +36,3 @@ export default defineConfig({
     chunkSizeWarningLimit: 1000 // Increase warning limit to 1000kb if needed
   }
 })
-  
