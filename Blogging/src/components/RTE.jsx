@@ -16,8 +16,8 @@ export default function RTE({ name, control, label, defaultvalue = "", className
           control={control}
           render={({ field: { onChange } }) => (
             <Editor
-              apiKey="n380xa2fvlngbzd26ghnt4nbnqhegswxf4akvfz1cckdgz8r"
-              initialValue={defaultvalue}
+            apiKey='n380xa2fvlngbzd26ghnt4nbnqhegswxf4akvfz1cckdgz8r'
+            initialValue={defaultvalue}
               className="mt-20"
               init={{
                 height: 500,
@@ -27,13 +27,20 @@ export default function RTE({ name, control, label, defaultvalue = "", className
                   'searchreplace', 'visualblocks', 'code', 'fullscreen',
                   'insertdatetime', 'media', 'table', 'help', 'wordcount', 'emoticons'
                 ],
-
-
                 toolbar:
                   'undo redo | formatselect | bold italic underline | ' +
                   'alignleft aligncenter alignright alignjustify | ' +
-                  'bullist numlist outdent indent | link image | emoticons | removeformat | help'
-
+                  'bullist numlist outdent indent | link image | emoticons | removeformat | help',
+                // Add mobile-specific configuration
+                mobile: {
+                  menubar: false,
+                  toolbar: 'undo redo bold italic | bullist numlist | link image',
+                  plugins: ['autosave', 'lists', 'autolink', 'link', 'image']
+                },
+                // Improve touch behavior
+                skin: 'oxide',
+                // Fix the domain registration issue
+                hidden_plugins: 'tinydrive'
               }}
               onEditorChange={onChange}
             />
