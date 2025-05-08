@@ -1,0 +1,20 @@
+{
+	"geolocation": {
+		"data": {
+			"city": "Surat",
+			"country": {
+				"code": "IN",
+				"name": "India"
+			},
+			"subdivision": {
+				"code": "GJ",
+				"name": "Gujarat"
+			},
+			"timezone": "Asia/Kolkata",
+			"latitude": 21.1981,
+			"longitude": 72.8298,
+			"postalCode": "395007"
+		},
+		"timestamp": 1746694120722
+	}
+}
